@@ -38,10 +38,9 @@ class BackwardsSearcher():
         self.block_size = 30  # size in bytes of a block
         self.block_num = 1  # number of the ongoing block
 
-    ### method 1, fast searcher of %%EOF, starting fro mthe end of the pdf file and search by block of bytes
+    ### method 1, fast searcher of %%EOF, starting from the end of the pdf file and search by block of bytes
     # @profile
     def block_find_eof(self):
-
         while self.eof_position == -1:
             # as long as %%EOF was not found at the start of a line
             try:
@@ -52,7 +51,7 @@ class BackwardsSearcher():
                 block_read = self.f.read(self.block_size)
 
                 if block_read.rfind(b'\n%%EOF') == -1:
-                    # no %%EOF found at the start of a line
+                    # %%EOF not found at the start of a line
                     self.block_num += 1
 
                 else:
