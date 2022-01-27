@@ -28,13 +28,17 @@ J'ai ajouté 3 tests aux fichiers pdf existants, pour tester le bon comportement
 
 Manipulation pour mesurer le temps d'exécution du programme.
 
-https://user-images.githubusercontent.com/51303242/151418884-c9ded3fa-4d76-4243-a8b5-c572606dfc4f.mp4
+https://user-images.githubusercontent.com/51303242/151421726-429c83e1-5fc7-40e2-8125-604bf52073ee.mp4
 
 ## Mesure de la ram du programme 
 
 Manipulation pour regarder la ram prise par chaque étape du programme.
 
-https://user-images.githubusercontent.com/51303242/151421355-549813e8-74c4-49c4-8fd4-46a86268ef46.mp4
+https://user-images.githubusercontent.com/51303242/151421695-4e54f843-d1d2-4de8-9150-105426263e0f.mp4
+
+
+
+
 
 
 
