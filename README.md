@@ -12,9 +12,9 @@ Le fichier .py s'appelle ma_solution et s'exécute depuis la commande de la sort
 4568
 ```
 
-Pour executer tous les tests d'un coup, j'ai créé un fichier .py avec unittest, regroupant tous les tests. Ce fichier s'appelle testma_solution
+Pour executer tous les tests d'un coup, j'ai créé un fichier .py avec unittest, regroupant tous les tests. Ce fichier s'appelle *testma_solution*.
 
-J'ai ajouté 3 tests aux fichiers pdf existants, pour tester le bon comportement de la fonction sur un fichier vide, un fichier commençant par %%EOF et un fichier court (19 caractères en octet).
+J'ai ajouté 2 tests aux fichiers pdf existants, pour tester le bon comportement de la fonction sur un fichier commençant par %%EOF et un fichier court (19 caractères en octet).
 
 Pour exécuter le fichier test :
 
