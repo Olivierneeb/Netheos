@@ -24,6 +24,19 @@ J'ai ajouté 3 tests aux fichiers pdf existants, pour tester le bon comportement
 - lecture par block de 30 octets en commençant par la fin du document. Une taille de block de 1028 octets sera plus rapide mais utilsiera plus de RAM.
 - controle en temps par line_profile et en ram par memory_profiler
 
-## Mesure temsp programme 
+## Mesure du temps d'exécution
 
-<video src="temps_mes_conv.mp4" width=360/>
+Manipulation pour mesurer le temps d'exécution du programme.
+https://user-images.githubusercontent.com/51303242/151418884-c9ded3fa-4d76-4243-a8b5-c572606dfc4f.mp4
+
+## Mesure de la ram du programme 
+
+Manipulation pour regarder la ram prise par chaque étape du programme.
+
+https://user-images.githubusercontent.com/51303242/151421355-549813e8-74c4-49c4-8fd4-46a86268ef46.mp4
+
+
+
+
+
+
