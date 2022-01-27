@@ -1,8 +1,8 @@
 #  Réponse 
 
 Implémentation d'un programme (en Python) lisant le fichier pdf en octets par la fin. 
-La méthode block_search_eof(), de la classe BackwardsSearcher(path), va étudier la présence de %%EOF en debut d'une ligne, dans un block de 30 octets, puis passer au suivant. 
-La fonction remonte ainsi le fichier pdf, et si %%EOF est trouvé, on print sa position en octet, sinon on print -1.
+La méthode *block_search_eof()*, de la classe *BackwardsSearcher(path)*, va étudier la présence de %%EOF en debut d'une ligne, dans un block de 30 octets, puis passer au suivant. 
+La fonction remonte ainsi le fichier pdf, et si %%EOF est trouvé, on print sa position dans le pdf en octet, sinon on print -1.
 
 ## Execution du fichier py
 
@@ -16,6 +16,8 @@ Pour executer tous les tests d'un coup, j'ai créé un fichier .py avec unittest
 
 J'ai ajouté 3 tests aux fichiers pdf existants, pour tester le bon comportement de la fonction sur un fichier vide, un fichier commençant par %%EOF et un fichier court (19 caractères en octet).
 
+Pour exécuter le fichier test :
+
 ```
 > python testma_solution
 ```
@@ -28,13 +30,17 @@ J'ai ajouté 3 tests aux fichiers pdf existants, pour tester le bon comportement
 
 ## Mesure du temps d'exécution
 
-Manipulation pour mesurer le temps d'exécution du programme.
+Afin de surveiller le temps d'exécution du programme, j'ai ajouté un @profile (commenté de base) pour afficher le temps d'exécution de chaque étape du programme.
+Je vous montre la manipulation à effectuer, pour décommenter les lignes nécessaires afin de mesurer le temps d'exécution du programme.
+
+La fonction a besoin de 3 ms dans le pire des cas (test_4.pdf où %%EOF est absent), ce qui me paraît suffisamment bas.
 
 https://user-images.githubusercontent.com/51303242/151421726-429c83e1-5fc7-40e2-8125-604bf52073ee.mp4
 
-## Mesure de la ram du programme 
+## Mesure de la RAM du programme 
 
-Manipulation pour regarder la ram prise par chaque étape du programme.
+De même pour l'utilisation de la RAM, petite vidéo explicative.
+Toutefois, j'ai des doutes sur la précision des mesures, car la RAM utilisée ne change jamais, quelque soit le temps d'exécution.
 
 https://user-images.githubusercontent.com/51303242/151421695-4e54f843-d1d2-4de8-9150-105426263e0f.mp4
 
