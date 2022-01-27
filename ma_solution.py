@@ -41,17 +41,15 @@ class BackwardsSearcher():
     ### method 1, fast searcher of %%EOF, starting from the end of the pdf file and search by block of bytes
     # @profile
     def block_find_eof(self):
-        while self.eof_position == -1:
-            # as long as %%EOF was not found at the start of a line
+        while self.eof_position == -1: # as long as %%EOF was not found at the start of a line
+
             try:
-                start_read = self.pdf_length - self.block_size * self.block_num + 6 * (self.block_num - 1)
-                # value in bytes of the ongoing block,
+                start_read = self.pdf_length - self.block_size * self.block_num + 6 * (self.block_num - 1) # value in bytes of the ongoing block
                 # the +6*(self.block_num-1) will create an overlap of 6 bytes with the precedent block, so %%EOF can't be split in 2 blocks
                 self.f.seek(start_read, 0)
                 block_read = self.f.read(self.block_size)
 
-                if block_read.rfind(b'\n%%EOF') == -1:
-                    # %%EOF not found at the start of a line
+                if block_read.rfind(b'\n%%EOF') == -1: # %%EOF not found at the start of a line
                     self.block_num += 1
 
                 else:
@@ -60,14 +58,12 @@ class BackwardsSearcher():
                     self.eof_position = start_read + block_read.rfind(b'\n%%EOF') + 1
                     self.f.close()
 
-            except OSError:
-                # pointer has exceeded the first byte of the file
+            except OSError: # pointer has exceeded the first byte of the file
                 self.f.seek(0, 0)
                 search = self.f.read(min(self.pdf_length, self.block_size)).rfind(b'\n%%EOF')
                 # we determine whether %%EOF is in a block that starts from the beginning of the file
                 self.f.seek(0, 0)
-                if b'%%EOF' in self.f.read(5) and search == -1:
-                    # check if %%EOF is at the start of the file
+                if b'%%EOF' in self.f.read(5) and search == -1: # check if %%EOF is at the start of the file
                     print(0)
                 else:
                     print(search)
