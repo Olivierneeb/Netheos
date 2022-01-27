@@ -6,6 +6,7 @@ La fonction remonte ainsi le fichier pdf, et si %%EOF est trouvé, on print sa p
 
 ## Execution du fichier py
 
+Le fichier .py s'appelle ma_solution et s'exécute depuis la commande de la sorte : 
 ```
 > python ma_solution test_1.pdf
 4568
