@@ -4,7 +4,7 @@ Implémentation d'un programme (en Python) lisant le fichier pdf en octets par l
 La méthode *block_search_eof()*, de la classe *BackwardsSearcher(path)*, va étudier la présence de %%EOF en debut d'une ligne, dans un block de 30 octets, puis passer au suivant. 
 La fonction remonte ainsi le fichier pdf, et si %%EOF est trouvé, on print sa position dans le pdf en octet, sinon on print -1.
 
-## Execution du fichier py
+## Exécution du fichier py
 
 Le fichier .py s'appelle ma_solution et s'exécute depuis la commande de la sorte : 
 ```
@@ -26,7 +26,7 @@ Pour exécuter le fichier test :
 
 - utilisation des fonctions natives, comme f.read() et .rfind()
 - lecture par block de 30 octets en commençant par la fin du document. Une taille de block de 1028 octets sera plus rapide mais utilsiera plus de RAM.
-- controle en temps par line_profile et en ram par memory_profiler
+- controle en temps par line_profile et en RAM par memory_profiler
 
 ## Mesure du temps d'exécution
 
