@@ -27,6 +27,7 @@ J'ai ajouté 3 tests aux fichiers pdf existants, pour tester le bon comportement
 ## Mesure du temps d'exécution
 
 Manipulation pour mesurer le temps d'exécution du programme.
+
 https://user-images.githubusercontent.com/51303242/151418884-c9ded3fa-4d76-4243-a8b5-c572606dfc4f.mp4
 
 ## Mesure de la ram du programme 
