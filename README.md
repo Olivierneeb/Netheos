@@ -1,7 +1,8 @@
 #  Réponse 
 
 Implémentation d'un programme (en Python) lisant le fichier pdf en octets par la fin. 
-
+La méthode block_search_eof(), de la classe BackwardsSearcher(path), va étudier la présence de %%EOF en debut d'une ligne, dans un block de 30 octets, puis passer au suivant. 
+La fonction remonte ainsi le fichier pdf, et si %%EOF est trouvé, on print sa position en octet, sinon on print -1.
 
 ## Execution du fichier py
 
